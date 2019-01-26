@@ -20,8 +20,8 @@ def main():
     ns = {"ead": "urn:isbn:1-931666-22-9"}
 
 
-    data_folder1 = '/Users/dwh2128/Documents/ACFA/exist-local/backups/for_migration/ead-export-20190123'
-    data_folder2 = 'xml'
+    data_folder1 = 'path/to/files1'
+    data_folder2 = 'path/to/files2'
 
     file_list1 = 'file_paths.txt'
     file_list2 = 'as_filepaths.txt'
