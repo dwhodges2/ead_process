@@ -192,6 +192,12 @@ def text_clean(the_str):
     the_str = " ".join(re.split("\s+", the_str, flags=re.UNICODE))
     the_str = re.sub('\s?xmlns=".*?"', '', the_str)
     the_str = re.sub('\s?xmlns:\w+=".*?"', '', the_str)
+    the_str = re.sub(r'(<subject)', r'\n\1', the_str)
+    the_str = re.sub(r'(<persname)',  r'\n\1', the_str)
+    the_str = re.sub(r'(<corpname)',  r'\n\1', the_str)
+    the_str = re.sub(r'(<p)', r'\n\1', the_str)
+    the_str = re.sub(r'<head>.*?</head>', r'', the_str)
+    the_str = re.sub(r'\n\n',  r'\n', the_str)
     the_str = re.sub('<BR/>', '\n\n', the_str)
     return the_str
 
